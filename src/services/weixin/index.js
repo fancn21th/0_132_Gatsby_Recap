@@ -116,7 +116,8 @@ const _config = ticket => {
   })
 }
 
-const _openChat = userid => {
+// 注意这里是一个 高级函数
+const _openChat = userid => () => {
   return new Promise((resolve, reject) => {
     wx.openEnterpriseChat({
       // 注意：userIds和externalUserIds至少选填一个。内部群最多2000人；外部群最多500人；如果有微信联系人，最多40人
