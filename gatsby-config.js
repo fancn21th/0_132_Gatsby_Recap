@@ -1,7 +1,11 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   proxy: {
     prefix: "/api",
-    url: "http://appmall.digitalchina.com",
+    url: "http://10.3.69.65",
   },
   siteMetadata: {
     title: `Gatsby Default Starter`,
